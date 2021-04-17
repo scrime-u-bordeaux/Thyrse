@@ -19,7 +19,12 @@ autoAck off : https://devzone.nordicsemi.com/f/nordic-q-a/3649/setting-auto-ack-
 alternatif touch sensor avec teensy : https://www.pjrc.com/teensy/td_libs_CapacitiveSensor.html  
 **TeensyLC OK pour capteurs capacitifs directement sur pins "touch" x11!**  
 Bibliothèque alternative pour n'importe quelle pin avec pullup : https://github.com/adrianfreed/FastTouch  
-  
+**Teensy LC !: 
+  SerialUSB.begin(9600);
+  while (!Serial) {
+    ; // _wait for serial port to connect. Needed for native USB port only_
+  }**  
+    
 Liste d'achat :  
 https://www.robotshop.com/be/fr/chargeur-batteries-lipo-micro-usb-adafruit.html
 https://www.robotshop.com/be/fr/cellule-batterie-lithium-de-polymere-37-v-1200-mah.html  
