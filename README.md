@@ -17,7 +17,9 @@ Modif antenne : https://www.instructables.com/Enhanced-NRF24L01/
 autoAck off : https://devzone.nordicsemi.com/f/nordic-q-a/3649/setting-auto-ack-off-on-pipe0-and-on-on-pipe1-makes-nrf24l01-stop-sending-receiving
   
 alternatif touch sensor avec teensy : https://www.pjrc.com/teensy/td_libs_CapacitiveSensor.html  
-**TeensyLC OK pour capteurs capacitifs directement sur pins "touch" x11!**
+**TeensyLC OK pour capteurs capacitifs directement sur pins "touch" x11!**  
+Bibliothèque alternative pour n'importe quelle pin avec pullup : https://github.com/adrianfreed/FastTouch  
+  
 Liste d'achat :  
 https://www.robotshop.com/be/fr/chargeur-batteries-lipo-micro-usb-adafruit.html
 https://www.robotshop.com/be/fr/cellule-batterie-lithium-de-polymere-37-v-1200-mah.html  
