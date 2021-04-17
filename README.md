@@ -20,9 +20,10 @@ alternatif touch sensor avec teensy : https://www.pjrc.com/teensy/td_libs_Capaci
 
 Liste d'achat :  
 https://www.robotshop.com/be/fr/chargeur-batteries-lipo-micro-usb-adafruit.html
-https://www.robotshop.com/be/fr/cellule-batterie-lithium-de-polymere-37-v-1200-mah.html
+https://www.robotshop.com/be/fr/cellule-batterie-lithium-de-polymere-37-v-1200-mah.html  
 https://www.robotshop.com/eu/fr/module-emetteur-recepteur-24g-nrf24l01-velleman-2pk.html  
-https://www.robotshop.com/eu/fr/platine-developpement-microcontroleur-usb-teensy-lc.html
-https://www.robotshop.com/eu/fr/module-accelerometre-3-axes-mma8452-velleman.html
-(?)https://www.robotshop.com/eu/fr/seeedstudio-grove-capteur-tactile-capacitif-i2c-v3-12-touches-mpr121.html
+https://www.robotshop.com/eu/fr/platine-developpement-microcontroleur-usb-teensy-lc.html  
+https://www.robotshop.com/eu/fr/module-accelerometre-3-axes-mma8452-velleman.html  
+(?)https://www.robotshop.com/eu/fr/seeedstudio-grove-capteur-tactile-capacitif-i2c-v3-12-touches-mpr121.html  
 (option: carte avec radio/processeur/chargeur batterie...)https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide  
+https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather  
