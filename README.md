@@ -29,7 +29,7 @@ Liste d'achat :
 https://www.robotshop.com/be/fr/chargeur-batteries-lipo-micro-usb-adafruit.html
 https://www.robotshop.com/be/fr/cellule-batterie-lithium-de-polymere-37-v-1200-mah.html  
 https://www.robotshop.com/eu/fr/module-emetteur-recepteur-24g-nrf24l01-velleman-2pk.html  
-_(radio alternative, plus fiable? : https://www.robotshop.com/eu/fr/module-emetteur-recepteur-seriel-sans-fil-433mhz-1000m.html)_  
+_(radio alternative, plus fiable? : https://www.robotshop.com/eu/fr/module-emetteur-recepteur-seriel-sans-fil-433mhz-1000m.html ; fix the clones : https://www.youtube.com/watch?v=ZfBuEAH-Q8Y&ab_channel=DIYTECHBROS ; TUTO :https://wolles-elektronikkiste.de/en/hc-12-radio-module)_  
 https://www.robotshop.com/eu/fr/platine-developpement-microcontroleur-usb-teensy-lc.html  
 https://www.robotshop.com/eu/fr/module-accelerometre-3-axes-mma8452-velleman.html  
 (?)https://www.robotshop.com/eu/fr/seeedstudio-grove-capteur-tactile-capacitif-i2c-v3-12-touches-mpr121.html  
