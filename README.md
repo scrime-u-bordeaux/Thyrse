@@ -2,7 +2,7 @@
 Projet de Donatien Garnier, controlleur sans fil dans un cep de vigne, NRF24-01+ et teensyLC  
 implementation Thyrse2022-fevrier :  
 channel1-pitchbend = JoystickY  
-channel2-pitchbend = JoystickX
+channel2-pitchbend = JoystickX  
 channel3-pitchbend = accelerationX  
 channel4-pitchbend = accelerationY  
 channel5-pitchbend = accelerationZ  
