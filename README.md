@@ -1,12 +1,12 @@
 # Thyrse
 Projet de Donatien Garnier, controlleur sans fil dans un cep de vigne, NRF24-01+ et teensyLC  
-implementation Thyrse2022-fevrier :  
-channel1-pitchbend = bouton rotatif    
-channel2-pitchbend = capteur pression souffle    
+implementation Thyrse2022-novembre :  
+channel1-pitchbend = capteur pression souffle    
+channel2-pitchbend = bouton rotatif    
 channel3-pitchbend = accelerationX  
 channel4-pitchbend = accelerationY  
 channel5-pitchbend = accelerationZ  
-channel7-noteOn/Off 1-5 = boutons (+bouton joystick)  
+channel7-noteOn/Off 1-5 = boutons  
   
 Bibliothèque capteur pression hx710 (teensy OK) : https://github.com/kurimawxx00/hx710B_pressure_sensor/blob/main/HX710B.cpp  
   
