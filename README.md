@@ -7,7 +7,7 @@ channel2-pitchbend = bouton rotatif
 channel3-pitchbend = accelerationX  
 channel4-pitchbend = accelerationY  
 channel5-pitchbend = accelerationZ  
-channel7-noteOn/Off 1-5 = boutons ** 
+channel7-noteOn/Off 1-5 = boutons**  
   
 Bibliothèque capteur pression hx710 (teensy OK) : https://github.com/kurimawxx00/hx710B_pressure_sensor/blob/main/HX710B.cpp  
   
