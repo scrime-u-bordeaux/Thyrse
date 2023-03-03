@@ -1,0 +1,8 @@
+#N canvas 1156 402 450 300 12;
+#X obj 148 39 receive \$2;
+#X obj 90 83 route \$1;
+#X obj 90 39 inlet;
+#X obj 90 153 array define \$2-\$1;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
