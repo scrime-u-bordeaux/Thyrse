@@ -742,7 +742,7 @@
 #X text 611 540 granular;
 #X text 700 540 sampler (TODO);
 #X text 524 540 fm synth;
-#N canvas 127 151 796 652 FM 1;
+#N canvas 65 352 1101 652 FM 1;
 #X obj 167 152 jl/feedfm~;
 #X obj 367 453 osc~;
 #X obj 367 424 +~;
