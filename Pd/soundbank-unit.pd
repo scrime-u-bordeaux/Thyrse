@@ -1,3 +1,0 @@
-#N canvas 1095 279 450 300 12;
-#X obj 90 153 array define \$2-\$1-L;
-#X obj 91 179 array define \$2-\$1-R;
