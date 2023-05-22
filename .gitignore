@@ -2,14 +2,6 @@
 Thumbs.db
 
 Sons/
-
-Pd/
-!Pd/thyrse.pd
-!Pd/stereo-soundbank-unit.pd
-!Pd/slideflute~.pd
-
-# Pd/dxop~.pd
-# Pd/brass-test.pd
-# Pd/slideflute-test.pd
+Pd-tmp/
 
 Score/phorminx-control.score
