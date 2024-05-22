@@ -3,12 +3,18 @@ Projet de Donatien Garnier, controlleur sans fil dans un cep de vigne, NRF24-01+
   
   **MAI 2024 : MPU6050 + HX710 + teensy3.2  
   lib : https://github.com/tockn/MPU6050_tockn/tree/master  
+  !!!ATTENTION axes conforme à la carte (Y = vertical), changement patch à prévoir!!!  
+  calibration de la dérive des gyros au démarage => ne pas bouger le metaphorminx avant led verte allumée (7 secondes)  
+  reste 7 pitchbend (14bit) disponibles  
   implementation midi 2024-mai :  
 channel1-pitchbend = capteur pression souffle    
 channel2-pitchbend = bouton rotatif    
 channel3-pitchbend = accelerationX  
 channel4-pitchbend = accelerationY  
 channel5-pitchbend = accelerationZ  
+channel6-pitchbend = gyroX  
+channel7-pitchbend = gyroY  
+channel8-pitchbend = gyroZ  
 channel7-noteOn/Off 1-5 = boutons**  
 .................................  
 **implementation midi Thyrse2022-novembre :  
