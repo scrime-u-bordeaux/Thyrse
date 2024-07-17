@@ -58,9 +58,9 @@ void loop() {
     digitalWrite(15, 0); //ROUGE
     digitalWrite(16, 1);
   }
-  if (radio.available()) {             // is there a payload? get the pipe number that recieved it
-    //uint8_t bytes = radio.getPayloadSize(); // get the size of the payload
-    radio.read(buffer, SIZE );           // fetch payload from FIFO
+  if (radio.available()) { // is there a payload? get the pipe number that recieved it
+    // uint8_t bytes = radio.getPayloadSize(); // get the size of the payload
+    radio.read(buffer, SIZE ); // fetch payload from FIFO
     for (uint8_t i = 0; i < 8; ++i) {
       if (bitRead(buffer[0], i) && !flagNote[i]) {
         usbMIDI.sendNoteOn(i + 1, 127, 7);
