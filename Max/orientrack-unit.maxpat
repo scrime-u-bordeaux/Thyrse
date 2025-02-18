@@ -44,8 +44,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "int", "int" ],
-					"patching_rect" : [ 60.0, 115.0, 58.0, 22.0 ],
-					"text" : "change 0"
+					"patching_rect" : [ 60.0, 115.0, 62.0, 22.0 ],
+					"text" : "change -1"
 				}
 
 			}
@@ -1353,7 +1353,7 @@
 
 											}
  ],
-										"originid" : "pat-7433"
+										"originid" : "pat-3101"
 									}
 ,
 									"patching_rect" : [ 307.0, 286.0, 97.0, 22.0 ],
@@ -1965,7 +1965,7 @@
 
 											}
  ],
-										"originid" : "pat-7435"
+										"originid" : "pat-3103"
 									}
 ,
 									"patching_rect" : [ 307.0, 458.0, 147.0, 22.0 ],
@@ -2749,7 +2749,7 @@
 
 											}
  ],
-										"originid" : "pat-7437"
+										"originid" : "pat-3105"
 									}
 ,
 									"patching_rect" : [ 475.333333333333258, 458.0, 147.0, 22.0 ],
@@ -3169,7 +3169,7 @@
 
 											}
  ],
-										"originid" : "pat-7439"
+										"originid" : "pat-3107"
 									}
 ,
 									"patching_rect" : [ 200.75, 291.0, 88.0, 22.0 ],
@@ -3384,7 +3384,7 @@
 
 											}
  ],
-										"originid" : "pat-7441"
+										"originid" : "pat-3109"
 									}
 ,
 									"patching_rect" : [ 28.75, 142.0, 95.0, 22.0 ],
@@ -4030,7 +4030,7 @@
 
 							}
  ],
-						"originid" : "pat-7431"
+						"originid" : "pat-3099"
 					}
 ,
 					"patching_rect" : [ 209.0, 364.0, 139.0, 35.0 ],
@@ -4773,59 +4773,59 @@
 
 			}
  ],
-		"originid" : "pat-7409",
+		"originid" : "pat-3077",
 		"dependency_cache" : [ 			{
 				"name" : "carToGeoDist.js",
-				"bootpath" : "~/Projects/SCRIME/2024/Rhapsode/Maxode",
+				"bootpath" : "~/Projects/git-repositories/scrime-u-bordeaux/Thyrse/Max",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "crossProduct.js",
-				"bootpath" : "~/Projects/SCRIME/2024/Rhapsode/Maxode",
+				"bootpath" : "~/Projects/git-repositories/scrime-u-bordeaux/Thyrse/Max",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "dotProduct.js",
-				"bootpath" : "~/Projects/SCRIME/2024/Rhapsode/Maxode",
+				"bootpath" : "~/Projects/git-repositories/scrime-u-bordeaux/Thyrse/Max",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "normalizeVector.js",
-				"bootpath" : "~/Projects/SCRIME/2024/Rhapsode/Maxode",
+				"bootpath" : "~/Projects/git-repositories/scrime-u-bordeaux/Thyrse/Max",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "overloop-unit~.maxpat",
-				"bootpath" : "~/Projects/SCRIME/2024/Rhapsode/Maxode",
+				"bootpath" : "~/Projects/git-repositories/scrime-u-bordeaux/Thyrse/Max",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "overloops~.maxpat",
-				"bootpath" : "~/Projects/SCRIME/2024/Rhapsode/Maxode",
+				"bootpath" : "~/Projects/git-repositories/scrime-u-bordeaux/Thyrse/Max",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "spherToCar.js",
-				"bootpath" : "~/Projects/SCRIME/2024/Rhapsode/Maxode",
+				"bootpath" : "~/Projects/git-repositories/scrime-u-bordeaux/Thyrse/Max",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "surfaceTorusFromSphereRadius.js",
-				"bootpath" : "~/Projects/SCRIME/2024/Rhapsode/Maxode",
+				"bootpath" : "~/Projects/git-repositories/scrime-u-bordeaux/Thyrse/Max",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
