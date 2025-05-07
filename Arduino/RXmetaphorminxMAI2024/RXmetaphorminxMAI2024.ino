@@ -18,8 +18,8 @@ uint8_t address[6] = "00001";
 float payload = 0.0;
 #define SIZE 32
 byte buffer[SIZE];
-bool flagNote[8] = { 0 };
-//#define DEBUG
+bool flagNote[8] = { false };
+// #define DEBUG ///////////////////////////////////////////// DEBUG !!!!!
 unsigned long lastRX;
 
 void setup() {
@@ -73,26 +73,28 @@ void loop() {
     }
     int souffle = (128 * buffer[1] + buffer[2]) - 8192;
     usbMIDI.sendPitchBend(souffle, 1);
-    int potar = (128 * buffer[3] + buffer[4]) - 8192;
-    usbMIDI.sendPitchBend(potar, 2);
-    int accX = (128 * buffer[5] + buffer[6]) - 8192;
-    usbMIDI.sendPitchBend(accX, 3);
-    int accY = (128 * buffer[7] + buffer[8]) - 8192;
-    usbMIDI.sendPitchBend(accY, 4);
-    int accZ = (128 * buffer[9] + buffer[10]) - 8192;
-    usbMIDI.sendPitchBend(accZ, 5);
-    int gyrX = (128 * buffer[11] + buffer[12]) - 8192;
-    usbMIDI.sendPitchBend(gyrX, 6);
-    int gyrY = (128 * buffer[13] + buffer[14]) - 8192;
-    usbMIDI.sendPitchBend(gyrY, 7);
-    int gyrZ = (128 * buffer[15] + buffer[16]) - 8192;
-    usbMIDI.sendPitchBend(gyrZ, 8);
-    int pitch = (128 * buffer[17] + buffer[18]) - 8192;
-    usbMIDI.sendPitchBend(pitch, 9);
-    int roll = (128 * buffer[19] + buffer[20]) - 8192;
-    usbMIDI.sendPitchBend(roll, 10);
-    int yaw = (128 * buffer[21] + buffer[22]) - 8192;
-    usbMIDI.sendPitchBend(yaw, 11);
+    int potargros = (128 * buffer[3] + buffer[4]) - 8192;
+    usbMIDI.sendPitchBend(potargros, 2);
+    int potarpetit = (128 * buffer[5] + buffer[6]) - 8192;
+    usbMIDI.sendPitchBend(potarpetit, 3);
+    int accX = (128 * buffer[7] + buffer[8]) - 8192;
+    usbMIDI.sendPitchBend(accX, 4);
+    int accY = (128 * buffer[9] + buffer[10]) - 8192;
+    usbMIDI.sendPitchBend(accY, 5);
+    int accZ = (128 * buffer[11] + buffer[12]) - 8192;
+    usbMIDI.sendPitchBend(accZ, 6);
+    // int gyrX = (128 * buffer[13] + buffer[14]) - 8192;
+    // usbMIDI.sendPitchBend(gyrX, 7);
+    // int gyrY = (128 * buffer[15] + buffer[16]) - 8192;
+    // usbMIDI.sendPitchBend(gyrY, 8);
+    // int gyrZ = (128 * buffer[17] + buffer[18]) - 8192;
+    // usbMIDI.sendPitchBend(gyrZ, 9);
+    // int pitch = (128 * buffer[19] + buffer[20]) - 8192;
+    // usbMIDI.sendPitchBend(pitch, 10);
+    // int roll = (128 * buffer[21] + buffer[22]) - 8192;
+    // usbMIDI.sendPitchBend(roll, 11);
+    // int yaw = (128 * buffer[23] + buffer[24]) - 8192;
+    // usbMIDI.sendPitchBend(yaw, 12);
 
     //usbMIDI.sendNoteOn(note, velocity, channel);
     digitalWrite(15, 1);  //vert

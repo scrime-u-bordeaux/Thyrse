@@ -11,7 +11,7 @@ class Mahony {
 
   float q[4];
 
-  float pitch, roll;
+  float pitch, roll, yaw;
   float azi, ele;
 
 public:

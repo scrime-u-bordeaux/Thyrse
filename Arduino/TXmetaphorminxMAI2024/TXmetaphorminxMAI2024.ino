@@ -1,7 +1,7 @@
 #include <EEPROM.h>
 #include <SPI.h>
 #include <RF24.h>
-#include <MadgwickAHRS.h>
+// #include <MadgwickAHRS.h>
 #include <Wire.h>
 #include "Calibrator.h"
 #include "Mahony.h"
@@ -48,7 +48,7 @@ float RAD2DEG = 180 / M_PI;
 float sr = 50; // Hz
 float fc = 5 / sr; // Hz
 OnePole hipass[3];
-Madgwick filter;
+// Madgwick filter;
 Mahony mahony;
 float ax, ay, az;
 float gx, gy, gz;
@@ -56,7 +56,7 @@ float p, r, y;
 int accX, accY, accZ;
 int gyrX, gyrY, gyrZ;
 int pitch, roll, yaw;
-bool buttons[5];
+bool buttons[7];
 
 RF24 radio(14, 10);            // using pin 14 for the CE pin, and pin 10 for the CSN pin
 uint8_t address[6] = "00001";  // Let these addresses be used for the pair
@@ -85,6 +85,8 @@ void setup() {
   Wire.begin();
   pinMode(0, OUTPUT);
   pinMode(1, OUTPUT);
+  pinMode(2, INPUT_PULLUP);
+  pinMode(3, INPUT_PULLUP);
   pinMode(15, INPUT_PULLUP);
   pinMode(16, INPUT_PULLUP);
   pinMode(17, INPUT_PULLUP);
@@ -124,7 +126,7 @@ void setup() {
     }
   }
 
-  filter.begin(500);
+  // filter.begin(500);
 
   // valid ranges : 2, 4, 8 and 16 G
   mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
@@ -180,18 +182,20 @@ void readButtons() {
   buttons[2] = !digitalRead(17);
   buttons[3] = !digitalRead(16);
   buttons[4] = !digitalRead(15);
+  buttons[5] = !digitalRead(3);
+  buttons[6] = !digitalRead(2);
 }
 
 void loop() {
   unsigned long nowMicros = micros();
 
   float deltat = (nowMicros - lastMeasureDate) * 1e-6f;
-  // if (nowMicros - lastMeasureDate < measureInterval) return;
+  if (nowMicros - lastMeasureDate < measureInterval) return;
   lastMeasureDate = nowMicros;
 
   readButtons();
   buffer[0] = 0;
-  for (unsigned int i = 0; i < 5; ++i) {
+  for (unsigned int i = 0; i < 7; ++i) {
     buffer[0] += buttons[i] << i;
   }
 
@@ -206,10 +210,15 @@ void loop() {
   buffer[1] = souffle >> 7;
   buffer[2] = souffle & 127;
 
-  // potentiomètre
-  uint16_t potar = analogRead(A8);
-  buffer[3] = potar >> 7;
-  buffer[4] = potar & 127;
+  // potentiomètre gros
+  uint16_t potargros = analogRead(A8);
+  buffer[3] = potargros >> 7;
+  buffer[4] = potargros & 127;
+
+  // potentiomètre petit
+  uint16_t potarpetit = analogRead(A14);
+  buffer[5] = potarpetit >> 7;
+  buffer[6] = potarpetit & 127;
 
   sensors_event_t a, g, temp;
   mpu.getEvent(&a, &g, &temp);
@@ -253,22 +262,22 @@ void loop() {
     accX = constrain((ax + 2) * 4096, 0, 16383);
     accY = constrain((ay + 2) * 4096, 0, 16383);
     accZ = constrain((az + 2) * 4096, 0, 16383);
-    buffer[5] = accX >> 7;
-    buffer[6] = accX & 127;
-    buffer[7] = accY >> 7;
-    buffer[8] = accY & 127;
-    buffer[9] = accZ >> 7;
-    buffer[10] = accZ & 127;
+    buffer[7] = accX >> 7;
+    buffer[8] = accX & 127;
+    buffer[9] = accY >> 7;
+    buffer[10] = accY & 127;
+    buffer[11] = accZ >> 7;
+    buffer[12] = accZ & 127;
 
     gyrX = constrain((gx / 500 + 1) * 8192, 0, 16383);
     gyrY = constrain((gy / 500 + 1) * 8192, 0, 16383);
     gyrZ = constrain((gz / 500 + 1) * 8192, 0, 16383);
-    buffer[11] = gyrX >> 7;
-    buffer[12] = gyrX & 127;
-    buffer[13] = gyrY >> 7;
-    buffer[14] = gyrY & 127;
-    buffer[15] = gyrZ >> 7;
-    buffer[16] = gyrZ & 127;
+    buffer[13] = gyrX >> 7;
+    buffer[14] = gyrX & 127;
+    buffer[15] = gyrY >> 7;
+    buffer[16] = gyrY & 127;
+    buffer[17] = gyrZ >> 7;
+    buffer[18] = gyrZ & 127;
 
     // p = filter.getPitch();
     // r = filter.getRoll();
@@ -280,12 +289,12 @@ void loop() {
     pitch = constrain((p / 90 + 1) * 8192, 0, 16383);
     roll = constrain((r / 180 + 1) * 8192, 0, 16383);
     yaw = constrain((y / 180 + 1) * 8192, 0, 16383);
-    buffer[17] = pitch >> 7;
-    buffer[18] = pitch & 127;
-    buffer[19] = roll >> 7;
-    buffer[20] = roll & 127;
-    buffer[21] = yaw >> 7;
-    buffer[22] = yaw & 127;
+    buffer[19] = pitch >> 7;
+    buffer[20] = pitch & 127;
+    buffer[21] = roll >> 7;
+    buffer[22] = roll & 127;
+    buffer[23] = yaw >> 7;
+    buffer[24] = yaw & 127;
 
   #ifdef DEBUG
     Serial.print(p);
