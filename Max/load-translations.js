@@ -231,6 +231,7 @@ Max.addHandler('segment', (langue, basename, segmentIndex) => {
 	if (moons[currentMoon] !== undefined) {
 		const moon = moons[currentMoon];
 		const langues = moon.langues[langue];
+		console.log(JSON.stringify(langues, null, 2));
 		
 		if (segmentIndex < langues.info.maxseg) {
 			const entry = langues.entries[basename];

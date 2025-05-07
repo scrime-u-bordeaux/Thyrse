@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 9,
 			"minor" : 0,
-			"revision" : 1,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 123.0, 150.0, 910.0, 734.0 ],
+		"rect" : [ 123.0, 150.0, 921.0, 734.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
@@ -181,7 +181,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 1,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -348,14 +348,10 @@
 
 							}
  ],
-						"originid" : "pat-8439"
+						"originid" : "pat-1280"
 					}
 ,
 					"patching_rect" : [ 565.5, 124.0, 102.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"globalpatchername" : ""
-					}
-,
 					"text" : "p local-read-write"
 				}
 
@@ -411,7 +407,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 1,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -697,14 +693,10 @@
 
 							}
  ],
-						"originid" : "pat-8441"
+						"originid" : "pat-1282"
 					}
 ,
 					"patching_rect" : [ 483.0, 88.0, 184.5, 22.0 ],
-					"saved_object_attributes" : 					{
-						"globalpatchername" : ""
-					}
-,
 					"text" : "p remote-read-write"
 				}
 
@@ -1200,7 +1192,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 1,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1702,14 +1694,10 @@
 
 							}
  ],
-						"originid" : "pat-8443"
+						"originid" : "pat-1284"
 					}
 ,
 					"patching_rect" : [ 362.0, 88.0, 117.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"globalpatchername" : ""
-					}
-,
 					"text" : "p pattrstorage-in-out"
 				}
 
@@ -1766,7 +1754,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 297.0, 449.0, 21.0, 22.0 ],
-					"text" : "t l"
+					"text" : "t s"
 				}
 
 			}
@@ -1797,7 +1785,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 1,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1923,14 +1911,10 @@
 
 							}
  ],
-						"originid" : "pat-8445"
+						"originid" : "pat-1286"
 					}
 ,
 					"patching_rect" : [ 349.0, 233.0, 93.0, 31.0 ],
-					"saved_object_attributes" : 					{
-						"globalpatchername" : ""
-					}
-,
 					"text" : "p shiftkey"
 				}
 
@@ -3056,7 +3040,7 @@
 
 			}
  ],
-		"originid" : "pat-8437",
+		"originid" : "pat-1278",
 		"dependency_cache" : [  ],
 		"autosave" : 0
 	}

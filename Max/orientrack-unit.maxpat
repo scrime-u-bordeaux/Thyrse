@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 583.0, 374.0, 604.0, 567.0 ],
+		"rect" : [ 583.0, 374.0, 1004.0, 517.0 ],
 		"openinpresentation" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
@@ -82,7 +82,6 @@
 					"patching_rect" : [ 831.0, 218.0, 66.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 1.0, 22.0, 20.0 ],
-					"text" : "#2",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"textjustification" : 1
 				}
@@ -423,7 +422,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "" ],
-					"patching_rect" : [ 573.5, 205.0, 44.0, 22.0 ],
+					"patching_rect" : [ 574.0, 205.0, 44.0, 22.0 ],
 					"text" : "sel 1 0"
 				}
 
@@ -545,7 +544,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 320.5, 430.0, 165.0, 56.0 ],
+					"patching_rect" : [ 321.0, 430.0, 165.0, 56.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 23.0, 202.0, 174.0 ],
 					"varname" : "overloops",
@@ -1353,7 +1352,7 @@
 
 											}
  ],
-										"originid" : "pat-3101"
+										"originid" : "pat-4106"
 									}
 ,
 									"patching_rect" : [ 307.0, 286.0, 97.0, 22.0 ],
@@ -1965,7 +1964,7 @@
 
 											}
  ],
-										"originid" : "pat-3103"
+										"originid" : "pat-4108"
 									}
 ,
 									"patching_rect" : [ 307.0, 458.0, 147.0, 22.0 ],
@@ -2749,7 +2748,7 @@
 
 											}
  ],
-										"originid" : "pat-3105"
+										"originid" : "pat-4110"
 									}
 ,
 									"patching_rect" : [ 475.333333333333258, 458.0, 147.0, 22.0 ],
@@ -3169,7 +3168,7 @@
 
 											}
  ],
-										"originid" : "pat-3107"
+										"originid" : "pat-4112"
 									}
 ,
 									"patching_rect" : [ 200.75, 291.0, 88.0, 22.0 ],
@@ -3384,7 +3383,7 @@
 
 											}
  ],
-										"originid" : "pat-3109"
+										"originid" : "pat-4114"
 									}
 ,
 									"patching_rect" : [ 28.75, 142.0, 95.0, 22.0 ],
@@ -4030,7 +4029,7 @@
 
 							}
  ],
-						"originid" : "pat-3099"
+						"originid" : "pat-4104"
 					}
 ,
 					"patching_rect" : [ 209.0, 364.0, 139.0, 35.0 ],
@@ -4773,7 +4772,7 @@
 
 			}
  ],
-		"originid" : "pat-3077",
+		"originid" : "pat-4082",
 		"dependency_cache" : [ 			{
 				"name" : "carToGeoDist.js",
 				"bootpath" : "~/Projects/git-repositories/scrime-u-bordeaux/Thyrse/Max",
