@@ -8,6 +8,7 @@
 // #include <MPU6050_tockn.h>
 // MPU6050 mpu6050(Wire);
 
+// see https://github.com/adafruit/Adafruit_MPU6050
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
 Adafruit_MPU6050 mpu;
@@ -17,7 +18,7 @@ Calibrator calibrator;
 #undef betaDef
 #define betaDef 0.1f
 
-// OnePole filter (thanks EarLevel Engineering !) /////////////////////////////
+// OnePole filter (not used for now, but thanks to EarLevel Engineering !)
 class OnePole {
   bool hipass;
   double a0, b1, z1;
