@@ -182,7 +182,7 @@ Max.addHandler('rootPath', (p) => {
 		
 		processFiles();
 		
-		console.log(JSON.stringify(moons, null, 2));
+		//console.log(JSON.stringify(moons, null, 2));
 
 		//const lunes = [ 'lunes' ];
 		Max.outlet('lunes', 'clear');
@@ -231,7 +231,7 @@ Max.addHandler('segment', (langue, basename, segmentIndex) => {
 	if (moons[currentMoon] !== undefined) {
 		const moon = moons[currentMoon];
 		const langues = moon.langues[langue];
-		console.log(JSON.stringify(langues, null, 2));
+		//console.log(JSON.stringify(langues, null, 2));
 		
 		if (segmentIndex < langues.info.maxseg) {
 			const entry = langues.entries[basename];
