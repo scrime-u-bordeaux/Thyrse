@@ -194,33 +194,6 @@ void loop() {
   if (nowMicros - lastMeasureDate < measureInterval) return;
   lastMeasureDate = nowMicros;
 
-  readButtons();
-  buffer[0] = 0;
-  for (unsigned int i = 0; i < 7; ++i) {
-    buffer[0] += buttons[i] << i;
-  }
-
-  // buffer[0] = !digitalRead(21) + 2 * !digitalRead(15) + 4 * !digitalRead(16) + 8 * !digitalRead(17) + 16 * !digitalRead(20);
-
-  // contrôleur souffle
-  if (digitalRead(din) == LOW) {
-    val = ((sread(27) - tval) / 1024) + 8192;
-    val = constrain(val, 0, 16383);
-  }
-  uint16_t souffle = val;
-  buffer[1] = souffle >> 7;
-  buffer[2] = souffle & 127;
-
-  // potentiomètre gros
-  uint16_t potargros = analogRead(A8);
-  buffer[3] = potargros >> 7;
-  buffer[4] = potargros & 127;
-
-  // potentiomètre petit
-  uint16_t potarpetit = analogRead(A14);
-  buffer[5] = potarpetit >> 7;
-  buffer[6] = potarpetit & 127;
-
   sensors_event_t a, g, temp;
   mpu.getEvent(&a, &g, &temp);
   ax = a.acceleration.x / 9.81;
@@ -256,6 +229,27 @@ void loop() {
   if (now - lastMidiOutDate >= midiOutInterval) {
     lastMidiOutDate = now;
 
+    readButtons();
+    buffer[0] = 0;
+    for (unsigned int i = 0; i < 7; ++i) {
+      buffer[0] += buttons[i] << i;
+    }
+
+    // contrôleur souffle
+    if (digitalRead(din) == LOW) {
+      val = ((sread(27) - tval) / 1024) + 8192;
+      val = constrain(val, 0, 16383);
+    }
+
+    uint16_t souffle = val;
+    buffer[1] = souffle >> 7;
+    buffer[2] = souffle & 127;
+
+    // potentiomètre gros
+    uint16_t potar = analogRead(A8);
+    buffer[3] = potar >> 7;
+    buffer[4] = potar & 127;
+
     // Serial.print(filter.getRoll());
     // Serial.print("\t");
     // Serial.println(filter.getPitch());
@@ -263,22 +257,22 @@ void loop() {
     accX = constrain((ax + 2) * 4096, 0, 16383);
     accY = constrain((ay + 2) * 4096, 0, 16383);
     accZ = constrain((az + 2) * 4096, 0, 16383);
-    buffer[7] = accX >> 7;
-    buffer[8] = accX & 127;
-    buffer[9] = accY >> 7;
-    buffer[10] = accY & 127;
-    buffer[11] = accZ >> 7;
-    buffer[12] = accZ & 127;
+    buffer[5] = accX >> 7;
+    buffer[6] = accX & 127;
+    buffer[7] = accY >> 7;
+    buffer[8] = accY & 127;
+    buffer[9] = accZ >> 7;
+    buffer[10] = accZ & 127;
 
     gyrX = constrain((gx / 500 + 1) * 8192, 0, 16383);
     gyrY = constrain((gy / 500 + 1) * 8192, 0, 16383);
     gyrZ = constrain((gz / 500 + 1) * 8192, 0, 16383);
-    buffer[13] = gyrX >> 7;
-    buffer[14] = gyrX & 127;
-    buffer[15] = gyrY >> 7;
-    buffer[16] = gyrY & 127;
-    buffer[17] = gyrZ >> 7;
-    buffer[18] = gyrZ & 127;
+    buffer[11] = gyrX >> 7;
+    buffer[12] = gyrX & 127;
+    buffer[13] = gyrY >> 7;
+    buffer[14] = gyrY & 127;
+    buffer[15] = gyrZ >> 7;
+    buffer[16] = gyrZ & 127;
 
     // p = filter.getPitch();
     // r = filter.getRoll();
@@ -290,12 +284,12 @@ void loop() {
     pitch = constrain((p / 90 + 1) * 8192, 0, 16383);
     roll = constrain((r / 180 + 1) * 8192, 0, 16383);
     yaw = constrain((y / 180 + 1) * 8192, 0, 16383);
-    buffer[19] = pitch >> 7;
-    buffer[20] = pitch & 127;
-    buffer[21] = roll >> 7;
-    buffer[22] = roll & 127;
-    buffer[23] = yaw >> 7;
-    buffer[24] = yaw & 127;
+    buffer[17] = pitch >> 7;
+    buffer[18] = pitch & 127;
+    buffer[19] = roll >> 7;
+    buffer[20] = roll & 127;
+    buffer[21] = yaw >> 7;
+    buffer[22] = yaw & 127;
 
   #ifdef DEBUG
     Serial.print(p);
