@@ -1374,7 +1374,6 @@
 														"classnamespace" : "box",
 														"rect" : [ 34.0, 100.0, 1334.0, 744.0 ],
 														"gridsize" : [ 15.0, 15.0 ],
-														"visible" : 1,
 														"boxes" : [ 															{
 																"box" : 																{
 																	"id" : "obj-24",
@@ -16368,7 +16367,7 @@
 																	"numoutlets" : 3,
 																	"outlettype" : [ "", "", "" ],
 																	"patching_rect" : [ 107.0, 183.0, 134.0, 22.0 ],
-																	"restore" : [ 3.0 ],
+																	"restore" : [ 2.0 ],
 																	"saved_object_attributes" : 																	{
 																		"parameter_enable" : 0,
 																		"parameter_mappable" : 0
@@ -16387,7 +16386,7 @@
 																	"numoutlets" : 3,
 																	"outlettype" : [ "", "", "" ],
 																	"patching_rect" : [ 107.0, 156.0, 145.0, 22.0 ],
-																	"restore" : [ 68.0 ],
+																	"restore" : [ 50.0 ],
 																	"saved_object_attributes" : 																	{
 																		"parameter_enable" : 0,
 																		"parameter_mappable" : 0
@@ -16406,7 +16405,7 @@
 																	"numoutlets" : 3,
 																	"outlettype" : [ "", "", "" ],
 																	"patching_rect" : [ 107.0, 130.0, 161.0, 22.0 ],
-																	"restore" : [ 1 ],
+																	"restore" : [ 0 ],
 																	"saved_object_attributes" : 																	{
 																		"parameter_enable" : 0,
 																		"parameter_mappable" : 0
@@ -28174,7 +28173,6 @@
 						"classnamespace" : "box",
 						"rect" : [ 442.0, 183.0, 940.0, 651.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-51",
